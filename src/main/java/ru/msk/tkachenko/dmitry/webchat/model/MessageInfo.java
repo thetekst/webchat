@@ -8,6 +8,7 @@ public class MessageInfo {
 
     private String from;
     private String text;
+    private String color;
 
     public MessageInfo() {
     }
@@ -26,5 +27,13 @@ public class MessageInfo {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import ru.msk.tkachenko.dmitry.webchat.model.Users;
 
 /**
  * @author Dmitry Tkachenko
@@ -41,4 +42,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
 
+    @Bean
+    public Users getUsers() {
+        return new Users();
+    }
 }
